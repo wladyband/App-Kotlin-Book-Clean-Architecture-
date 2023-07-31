@@ -1,15 +1,16 @@
 package com.wladimirbr.readingplan.navigation
 
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.ExperimentalComposeUiApi
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import com.bawp.freader.screens.login.ReaderBookLoginScreen
 import com.wladimirbr.readingplan.screens.ReaderSplashScreen
 import com.wladimirbr.readingplan.screens.home.ReaderBookHomeScreen
-import com.wladimirbr.readingplan.screens.login.ReaderBookLoginScreen
 import com.wladimirbr.readingplan.screens.stats.ReaderBookStatsScreen
 
-
+@ExperimentalComposeUiApi
 @Composable
 fun ReaderNavigation() {
     val navController = rememberNavController()
