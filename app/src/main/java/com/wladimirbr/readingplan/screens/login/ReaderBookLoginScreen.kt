@@ -64,7 +64,9 @@ fun ReaderBookLoginScreen(
                 }
             } else {
                 UserForm(loading = false, isCreateAccount = true) { email, password ->
-                    //Todo: create FB account
+                    viewModel.createUserWithEmailAndPassword(email, password) {
+                        navController.navigate(ReaderScreens.ReaderHomeScreen.name)
+                    }
                 }
             }
 
