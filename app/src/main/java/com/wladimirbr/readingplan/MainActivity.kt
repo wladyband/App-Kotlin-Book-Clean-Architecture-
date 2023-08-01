@@ -1,7 +1,6 @@
 package com.wladimirbr.readingplan
 
 import android.os.Bundle
-import android.util.Log
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.Arrangement
@@ -14,13 +13,12 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.ExperimentalComposeUiApi
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.google.firebase.firestore.FirebaseFirestore
 import com.wladimirbr.readingplan.navigation.ReaderNavigation
 import com.wladimirbr.readingplan.ui.theme.ReadingPlanTheme
 
 import dagger.hilt.android.AndroidEntryPoint
 
-
+@ExperimentalComposeUiApi
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -35,6 +33,7 @@ class MainActivity : ComponentActivity() {
 }
 
 
+@ExperimentalComposeUiApi
 @Composable
 fun ReaderApp() {
 
