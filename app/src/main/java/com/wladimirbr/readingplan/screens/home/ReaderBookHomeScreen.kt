@@ -53,7 +53,7 @@ fun HomeContent(navController: NavController) {
     val currentUserName = email?.split("@")?.get(0) ?: "N/A"
     Column(
         Modifier.padding(2.dp),
-        verticalArrangement = Arrangement.SpaceEvenly
+        verticalArrangement = Arrangement.Top
     ) {
         Row(modifier = Modifier.align(alignment = Alignment.Start)) {
             TitleSection(label = "You  Reading \n" + " activity right... ")
