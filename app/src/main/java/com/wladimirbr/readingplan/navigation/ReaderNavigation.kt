@@ -2,12 +2,14 @@ package com.wladimirbr.readingplan.navigation
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.ExperimentalComposeUiApi
+import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.bawp.freader.screens.login.ReaderBookLoginScreen
 import com.wladimirbr.readingplan.screens.ReaderSplashScreen
 import com.wladimirbr.readingplan.screens.home.Home
+import com.wladimirbr.readingplan.screens.search.BooksSearchViewModel
 import com.wladimirbr.readingplan.screens.search.ReaderBookSearchScreen
 import com.wladimirbr.readingplan.screens.stats.ReaderBookStatsScreen
 
@@ -34,7 +36,9 @@ fun ReaderNavigation() {
             Home(navController = navController)
         }
         composable(ReaderScreens.SearchScreen.name) {
-            ReaderBookSearchScreen(navController = navController)
+            val searchViewModel = hiltViewModel<BooksSearchViewModel>()
+
+            ReaderBookSearchScreen(navController = navController, viewModel = searchViewModel)
         }
     }
 }
