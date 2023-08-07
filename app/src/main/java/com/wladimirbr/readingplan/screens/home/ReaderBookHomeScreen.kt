@@ -1,6 +1,7 @@
 package com.wladimirbr.readingplan.screens.home
 
 import android.annotation.SuppressLint
+import android.util.Log
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.horizontalScroll
@@ -114,6 +115,7 @@ fun HomeContent(navController: NavController) {
 @Composable
 fun BoolListArea(listOfBooks: List<MBook>, navController: NavController) {
     HorizontalScrollableComponent(listOfBooks){
+        Log.d("tag", "bookListArea $it" )
         // todo: clicar no card
     }
 }
